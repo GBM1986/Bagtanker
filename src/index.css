@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the transition applies to the background image */
+.bg-transition {
+    transition: background-image 1s ease-in-out;
+  }
+  

@@ -1,0 +1,6 @@
+/* styles.css */
+
+#image-change {
+    transition: background-image 1s ease-in-out; /* Adjust the timing as needed */
+  }
+  
