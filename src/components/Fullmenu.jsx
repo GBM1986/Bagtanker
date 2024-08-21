@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const FullMenu = () => {
   return (
-    <div className="xl:flex space-x-8 text-lg ml-12">
-      <Link className="pl-8 cursor-pointer" to="/">Forside</Link>
-      <Link className="cursor-pointer" to="/lineup">Lineup</Link>
-      <Link className="cursor-pointer" to="/program">PROGRAM</Link>
-      <Link className="cursor-pointer" to="/camps">CAMPS</Link>
-      <Link className="cursor-pointer" to="/info">INFO</Link>
-      <Link className="cursor-pointer" to="/købbillet">KØB BILLET</Link>
-      <Link className="cursor-pointer" to="/login">LOGIN</Link>
+    <div className="w-full bg-[#323540E5] xl:flex space-x-24 text-lg pt-10 pb-10 pl-10 text-[#F5F5F0] font-sans font-light">
+      <Link className="pl-20 cursor-pointer" to="/produkter/rundstykker">RUNDSTYKKER</Link>
+      <Link className="cursor-pointer" to="/produkter/baguettes">BAGUETTES</Link>
+      <Link className="cursor-pointer" to="/produkter/franskbrod">FRANSKBRØD</Link>
+      <Link className="cursor-pointer" to="/produkter/kager">KAGER</Link>
+      <Link className="cursor-pointer" to="/produkter/rugbrod">RUGBRØD</Link>
     </div>
   );
 };

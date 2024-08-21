@@ -9,6 +9,13 @@ import MainLayout from './layout/Mainlayout.jsx';
 import SecondaryLayout from './layout/SecondaryLayout.jsx';
 import { Navbar } from './components/Navbar.jsx';
 import { Nyheder } from './pages/Nyheder.jsx';
+import { Produkter } from './pages/Produkter.jsx';
+import { Kager } from './pages/produkter/Kager.jsx';
+import { Rundstykker } from './pages/produkter/Rundstykker.jsx';  
+import { Baguettes } from './pages/produkter/Baguettes.jsx';      
+import { Franskbrod } from './pages/produkter/Franskbrod.jsx';    
+import { Rugbrod } from './pages/produkter/Rugbrod.jsx';         
+
 
 
 const App = () => {
@@ -17,6 +24,15 @@ const App = () => {
       <SupabaseProvider>        
           <Routes>
           <Route element={<MainLayout />}>
+          <Route path="/produkter" element={<Produkter />}>
+            {/* Sub-routes under /produkter */}
+            <Route path="kager" element={<Kager />} />
+            <Route path="rundstykker" element={<Rundstykker />} />
+            <Route path="baguettes" element={<Baguettes />} />
+            <Route path="franskbrod" element={<Franskbrod />} />
+            <Route path="rugbrod" element={<Rugbrod />} />
+          </Route>
+            <Route path='/login' element={<Login />} />
             <Route path='/kontakt' element={<Login />} />
           </Route>
 

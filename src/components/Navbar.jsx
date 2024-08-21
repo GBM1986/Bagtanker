@@ -13,7 +13,7 @@ export const Navbar = () => {
       background: 'linear-gradient(0deg, rgba(151, 151, 151, 0) 0%, #616161 100%)',
       width: '100%',   // Full width of the container
     }}
-     className="flex justify-between items-center px-8 w-full h-20 bg-white py-4">
+     className="flex justify-between items-center px-8 w-full h-26 bg-white py-4">
       {/* Logo */}
       <div className="flex items-center">
         <img className="h-16 bg-transparent" src={logo} alt="logo" />
@@ -30,7 +30,7 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Sidebar Menu for mobile */}
+      {/* Sidebar Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-[500px] bg-[#323540E5] z-30 transform transition-transform duration-300 ${click ? 'translate-x-0' : 'translate-x-full'}`}
       >
@@ -38,8 +38,8 @@ export const Navbar = () => {
           <Link to="/" onClick={() => setClick(false)}>
             <li className="py-4 my-4 cursor-pointer hover:border-primary">Forside</li>
           </Link>
-          <Link to="/produckter" onClick={() => setClick(false)}>
-            <li className="py-4 my-4 cursor-pointer hover:border-primary">Produckter</li>
+          <Link to="/produkter" onClick={() => setClick(false)}>
+            <li className="py-4 my-4 cursor-pointer hover:border-primary">Produkter</li>
           </Link>
           <Link to="/nyheder" onClick={() => setClick(false)}>
             <li className="py-4 my-4 cursor-pointer hover:border-primary">Nyheder</li>
