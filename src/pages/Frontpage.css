@@ -1,6 +1,19 @@
-/* styles.css */
-
 #image-change {
-    transition: background-image 1s ease-in-out; /* Adjust the timing as needed */
-  }
-  
+  transition: background-image 1s ease-in-out;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.scale-150 {
+  transform: scale(0.8);
+}
+
+.cursor-pointer:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}

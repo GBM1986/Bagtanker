@@ -15,9 +15,16 @@ export const Navbar = () => {
     }}
      className="flex justify-between items-center px-8 w-full h-26 bg-white py-4">
       {/* Logo */}
-      <div className="flex items-center">
-        <img className="h-16 bg-transparent" src={logo} alt="logo" />
-      </div>
+      <div className="relative flex items-center justify-center opacity-75">
+      {/* Ring (Sun) */}
+      <div className="absolute w-[80px] h-[80px] bg-customGold shadow-inset-shadow rounded-full opacity-100 -translate-x-10"></div>
+
+      {/* Text */}
+      <h1 className="text-6xl font-irish flex items-center justify-center relative z-10">
+        Bagtanker
+      </h1>
+    </div>
+
 
       {/* Burger Menu Button */}
       <div>
@@ -26,7 +33,7 @@ export const Navbar = () => {
           onClick={() => setClick(!click)}
           style={{ zIndex: 100 }}
         >
-          {click ? <FaTimes className=" text-2xl" /> : <CiMenuBurger className="text-2xl" />}
+          {click ? <FaTimes className=" text-2xl text-white" /> : <CiMenuBurger className="text-2xl text-white" />}
         </button>
       </div>
 
