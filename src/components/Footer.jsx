@@ -32,7 +32,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#323540] text-white fixed bottom-0 left-0 right-0 py-6">
       <div className="max-w-screen-xl px-6 mx-auto">
-        <div className="flex flex-wrap gap-96">
+        <div className="flex flex-wrap ">
           {/* Contact Information Section */}
           <div className="flex-1">
             <h4 className="text-4xl font-extralight font-irish">Bagtanker</h4>
@@ -40,16 +40,16 @@ export const Footer = () => {
               <p>Øster Utterupvej 1</p>
               <p>9000 Aalborg</p>
               <br />
-              <a className="hover:opacity-75 cursor-pointer" href="#">Tlf: 12345678</a>
-              <a className="hover:opacity-75 cursor-pointer" href="#">Email: info@bagtanker.dk</a>
+              <a className="cursor-pointer" href="#">Tlf: 12345678</a>
+              <a className="cursor-pointer" href="#">Email: info@bagtanker.dk</a>
             </section>
           </div>
 
           {/* Newsletter Signup Section */}
           <div className="flex-1">
-            <section className="flex flex-col mt-4 space-y-4 text-sm">
-              <h4 className="text-4xl font-extralight">Tilmeld dig Bagtankers nyhedsbrev</h4>
-              <p className="text-lg">Få vores nyheder direkte i din indbakke</p>
+            <section className="flex flex-col mt-4 space-y-4 text-sm items-end">
+              <h4 className="text-2xl font-extralight">Tilmeld dig Bagtankers nyhedsbrev</h4>
+              <p>Få vores nyheder direkte i din indbakke</p>
               <form className="flex flex-col space-y-4">
                 <input
                   className="px-4 py-2 w-64 max-w-md border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 self-end text-black"

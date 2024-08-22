@@ -15,6 +15,7 @@ import { Rundstykker } from './pages/produkter/Rundstykker.jsx';
 import { Baguettes } from './pages/produkter/Baguettes.jsx';      
 import { Franskbrod } from './pages/produkter/Franskbrod.jsx';    
 import { Rugbrod } from './pages/produkter/Rugbrod.jsx';         
+import { Kontakt } from './pages/Kontakt.jsx';
 
 
 
@@ -33,7 +34,7 @@ const App = () => {
             <Route path="rugbrod" element={<Rugbrod />} />
           </Route>
             <Route path='/login' element={<Login />} />
-            <Route path='/kontakt' element={<Login />} />
+            <Route path='/kontakt' element={<Kontakt />} />
           </Route>
 
           <Route element={<SecondaryLayout />}>
