@@ -16,23 +16,22 @@ import { Baguettes } from './pages/produkter/Baguettes.jsx';
 import { Franskbrod } from './pages/produkter/Franskbrod.jsx';    
 import { Rugbrod } from './pages/produkter/Rugbrod.jsx';         
 import { Kontakt } from './pages/Kontakt.jsx';
-
-
+import { ProduktDetails } from './pages/ProduktDetails.jsx';
 
 const App = () => {
   return (
     <Router>
       <SupabaseProvider>        
-          <Routes>
+        <Routes>
           <Route element={<MainLayout />}>
-          <Route path="/produkter" element={<Produkter />}>
-            {/* Sub-routes under /produkter */}
-            <Route path="kager" element={<Kager />} />
-            <Route path="rundstykker" element={<Rundstykker />} />
-            <Route path="baguettes" element={<Baguettes />} />
-            <Route path="franskbrod" element={<Franskbrod />} />
-            <Route path="rugbrod" element={<Rugbrod />} />
-          </Route>
+            <Route path="/produkter" element={<Produkter />}>
+              <Route path="/produkter/details/:id" element={<ProduktDetails />} /> {/* Keep consistent with link */}
+              <Route path="kager" element={<Kager />} />
+              <Route path="rundstykker" element={<Rundstykker />} />
+              <Route path="baguettes" element={<Baguettes />} />
+              <Route path="franskbrod" element={<Franskbrod />} />
+              <Route path="rugbrod" element={<Rugbrod />} />
+            </Route>
             <Route path='/login' element={<Login />} />
             <Route path='/kontakt' element={<Kontakt />} />
           </Route>
@@ -41,7 +40,7 @@ const App = () => {
             <Route path="/" element={<Frontpage />} />
             <Route path="/nyheder" element={<Nyheder />} />  
           </Route>
-          </Routes>
+        </Routes>
       </SupabaseProvider>
     </Router>
   );
