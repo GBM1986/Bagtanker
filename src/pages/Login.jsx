@@ -44,7 +44,7 @@ export const Login = () => {
   };
 
   return (
-    <div>
+    <div className='h-screen'>
       {/* Render login form only if loginData is not present */}
       {!loginData || !loginData.user ? (
         <form className='max-w-md mx-auto bg-white' onSubmit={handleSubmit(handleLogin)}>

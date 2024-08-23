@@ -18,6 +18,7 @@ import { Rugbrod } from './pages/produkter/Rugbrod.jsx';
 import { Kontakt } from './pages/Kontakt.jsx';
 import { ProduktDetails } from './pages/ProduktDetails.jsx';
 import { AuthProvider } from './providers/AuthProvider.jsx';
+import { ProductList } from './components/ProductList.jsx';
 
 const App = () => {
   return (
@@ -26,21 +27,25 @@ const App = () => {
         <AuthProvider> 
         <Routes>
           <Route element={<MainLayout />}>
-            <Route path="/produkter" element={<Produkter />}>
-              <Route path="/produkter/details/:id" element={<ProduktDetails />} /> {/* Keep consistent with link */}
-              <Route path="kager" element={<Kager />} />
+            <Route path="/produkter" element={<ProductList />}>
+              <Route path=':category_id' element={<ProductList />} />
+              {/* <Route path="kager" element={<Kager />} />
               <Route path="rundstykker" element={<Rundstykker />} />
               <Route path="baguettes" element={<Baguettes />} />
               <Route path="franskbrod" element={<Franskbrod />} />
-              <Route path="rugbrod" element={<Rugbrod />} />
+              <Route path="rugbrod" element={<Rugbrod />} /> */}
+              {/* <Route path="/produkter/details/:id" element={<ProduktDetails />} /> Keep consistent with link */}
             </Route>
             <Route path='/login' element={<Login />} />
             <Route path='/kontakt' element={<Kontakt />} />
+            <Route path="/nyheder" element={<Nyheder />} />  
+            <Route path="/nyheder/:id" element={<Nyheder />} /> 
           </Route>
 
           <Route element={<SecondaryLayout />}>
             <Route path="/" element={<Frontpage />} />
-            <Route path="/nyheder" element={<Nyheder />} />  
+            
+            
           </Route>
         </Routes>
         </AuthProvider>

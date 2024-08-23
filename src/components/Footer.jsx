@@ -30,8 +30,8 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#323540] text-white fixed bottom-0 left-0 right-0 py-6">
-      <div className="max-w-screen-xl px-6 mx-auto">
+    <footer className="bg-[#323540] text-white">
+      <div className="max-w-screen-xl px-6 py-10 mx-auto">
         <div className="flex flex-wrap ">
           {/* Contact Information Section */}
           <div className="flex-1">
