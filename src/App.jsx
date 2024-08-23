@@ -17,11 +17,13 @@ import { Franskbrod } from './pages/produkter/Franskbrod.jsx';
 import { Rugbrod } from './pages/produkter/Rugbrod.jsx';         
 import { Kontakt } from './pages/Kontakt.jsx';
 import { ProduktDetails } from './pages/ProduktDetails.jsx';
+import { AuthProvider } from './providers/AuthProvider.jsx';
 
 const App = () => {
   return (
     <Router>
-      <SupabaseProvider>        
+      <SupabaseProvider>
+        <AuthProvider> 
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/produkter" element={<Produkter />}>
@@ -41,6 +43,7 @@ const App = () => {
             <Route path="/nyheder" element={<Nyheder />} />  
           </Route>
         </Routes>
+        </AuthProvider>
       </SupabaseProvider>
     </Router>
   );

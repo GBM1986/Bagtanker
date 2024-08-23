@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useAuth } from '../providers/AuthProvider';
 import { createClient } from '@supabase/supabase-js';
 import { useSupabase } from '../providers/SupabaseProvider';
+import { MinSide } from '../components/MinSide';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
@@ -79,8 +80,9 @@ export const Login = () => {
         </form>
       ) : (
         <div>
-          <p>Du er logget ind som {`${loginData.user.email}`}</p>
-          <button className='bg-[#5F657B] px-16 py-2 text-white font-light rounded-sm mt-4' onClick={handleLogout}>Log ud</button>
+          <MinSide />
+          <p className='mt-4'>Du er logget ind som {`${loginData.user.email}`}</p>
+          <button className='bg-[#5F657B] px-16 py-2 text-white font-light rounded-sm mt-2' onClick={handleLogout}>Log ud</button>
         </div>
       )}
     </div>
